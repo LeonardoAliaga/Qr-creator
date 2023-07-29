@@ -17,20 +17,14 @@ app.get("/", (req, res, next) => {
 });
 
 app.post("/scan", (req, res, next) => {
+  console.log(req)
   const input_text = req.body.text;
   console.log(input_text);
-//   qrcode.toDataURL(input_text, (err, src) => {
-//       res.render("scan", {
-//           qr_code: src,
-//       });
-//   });
-     var segs = [
-       { data: "ABCDEFG", mode: "alphanumeric" },
-       { data: "0123456", mode: "numeric" },
-     ];
-
-     qrcode.toString(segs, { type: "terminal" }, function (err, url) {
-  console.log(url);
-     });
+   qrcode.toDataURL(input_text, (err, src) => {
+      res.render("scan", {
+           qr_code: src,
+       });
+   });
+    
 });
 app.listen(port, console.log(`El puerto ${port} está activo.`));
