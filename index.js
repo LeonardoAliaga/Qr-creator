@@ -11,13 +11,13 @@ app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "view"));
 
-app.use(express.static('public'))
+app.use(express.static('public'));
+
 app.get("/", (req, res, next) => {
   res.render("index");
 });
 
 app.post("/scan", (req, res, next) => {
-  console.log(req)
   const input_text = req.body.text;
   console.log(input_text);
    qrcode.toDataURL(input_text, (err, src) => {

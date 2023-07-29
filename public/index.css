@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.container h1 {
+    padding: 2rem 0;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+.container .bar {
+    width: 15rem;
+    height: 0.2rem;
+    margin-bottom: 2rem;
+    background: #0191b6;
+}
+.container textarea {
+    width: 27rem;
+    height: 2rem;
+}
+.container button {
+    display: block;
+    margin: 1rem auto;
+    width: 8rem;
+    height: 2rem;
+    color: #ffffff;
+    background: #0191b6;
+    border: none;
+}
+
+.container img {
+    min-width: 17rem;
+    max-width: 27rem;
+}
+.container a {
+    display: block;
+    padding: 0.5rem 3rem;
+    text-decoration: none;
+    color: #ffffff;
+    background: #0191b6;
+    border: none;
+}
